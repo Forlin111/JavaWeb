@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--静态-->
+    <button onclick="onclick1()">11</button>
+    <button id="click2">22</button>
+
+
+</body>
+<script>
+    function onclick1() {
+        alert("onclick1");
+    }
+    //先获取对象,再通过对象.事件名.function()
+    let id2 = document.getElementById("click2");
+    id2.onclick=function () {
+        alert("onclick2");
+    }
+</script>
+</html>

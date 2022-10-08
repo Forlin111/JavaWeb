@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        <!--json的定义-->
+        let jsonObj={
+            "key1":12,
+            "key2":true,
+            "key3":"abc",
+            "key4":[11,"arr"],
+            "key5":{
+                "key5_1":543,
+                "key5_2":123
+            },
+            "key6":[{
+                "key6_1":123,
+                "key6_1":234
+            },{
+                "key6_3":123,
+                "key6_4":234
+            }]
+        };
+        /*json的访问*/
+        // alert(jsonObj.key1)
+        // alert(jsonObj.key4)
+
+        //将json对象转化为字符串形式
+        let s = JSON.stringify(jsonObj);
+        alert(s)
+        //将字符串形式转化为对象
+        let parse = JSON.parse(s);
+        alert(parse)
+
+    </script>
+
+</body>
+</html>

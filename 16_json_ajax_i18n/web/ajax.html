@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--演示ajax请求-->
+<script>
+    //使用javascript语言ajax请求,访问服务器ajaxServlet服务器中的javascriptAjax
+    function ajaxRequest() {
+        //1,创建XMLhttpRequest对象
+        let xmlHttpRequest = new XMLHttpRequest();
+        //调用方法设置参数 请求类型,请求地址,true为异步,false为同步
+        xmlHttpRequest.open("GET", "http://localhost:8087/16_json_ajax_i18n/ajaxServlet", true);
+        //绑定事件处理请求
+        xmlHttpRequest.onreadystatechange = function () {
+            if (xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200) {
+                //把响应的数据显示在页面上
+                //document.getElementById("div1").innerHTML=xmlHttpRequest.responseText;
+
+                let jsonObj = JSON.parse(xmlHttpRequest.responseText);
+                document.getElementById("ta").innerHTML = "编号:" + jsonObj.id + "\r\n" + "姓名:" + jsonObj.name;
+            }
+        }
+        //发送请求
+        xmlHttpRequest.send();
+    }
+</script>
+
+
+<button onclick="ajaxRequest()">ajax request</button>
+<table id="ta">
+
+</table>
+</body>
+</html>

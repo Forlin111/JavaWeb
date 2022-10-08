@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--根据标签名获取对象-->
+兴趣爱好:
+<input type="checkbox" checked="checked">java
+<input type="checkbox">c++
+<input type="checkbox">python<br>
+<button onclick="tagName()">1111</button>
+</body>
+<script>
+    function tagName() {
+        let byTagName = document.getElementsByTagName("input");
+        for (let i = 0; i < byTagName.length; i++) {
+            byTagName[i].checked = true;
+        }
+    }
+</script>
+</html>

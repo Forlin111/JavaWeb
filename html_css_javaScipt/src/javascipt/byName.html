@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+兴趣爱好:
+<input type="checkbox" name="hobby" checked="checked">java
+<input type="checkbox" name="hobby">c++
+<input type="checkbox" name="hobby">python<br>
+<button onclick="checkAll()">全选</button>
+<button onclick="noCheckAll()">全不选</button>
+<button onclick="check()">反选</button>
+
+<script>
+    function checkAll() {
+        let allName = document.getElementsByName("hobby");
+        for (let i = 0; i < allName.length; i++) {
+            allName[i].checked = true;
+        }
+    }
+
+    function noCheckAll() {
+        let allName = document.getElementsByName("hobby");
+        for (let i = 0; i < allName.length; i++) {
+            allName[i].checked = false;
+        }
+    }
+
+    function check() {
+        let allName = document.getElementsByName("hobby");
+        for (let i = 0; i < allName.length; i++) {
+            if (allName[i].checked==true){
+                allName[i].checked=false;
+            }else {
+                allName[i].checked=true
+            }
+        }
+    }
+</script>
+</body>
+</html>

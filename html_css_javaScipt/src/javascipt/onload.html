@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--onload静态注册页面-->
+    <!--浏览器解析完页面后就会自动触发的事件-->
+
+</body>
+    <script>
+        function onloadFun() {
+            /*这是静态注册*/
+            alert("静态注册");
+        }
+        onloadFun();
+        /*动态注册*/
+        window.onload=function () {
+            alert("动态注册")
+        }
+    </script>
+</html>

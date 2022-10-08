@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn1">#bj</button>
+    <button id="btn2">#li</button>
+    <p id="bj">北京</p>
+    <ul>
+        <li>你好</li>
+        <li>你好</li>
+        <li>解决</li>
+    </ul>
+</body>
+<script>
+    document.getElementById("btn1").onclick=function () {
+        let value = document.getElementById("bj");
+        alert(value.innerHTML);
+    }
+    document.getElementById("btn2").onclick=function () {
+        let byTagName = document.getElementsByTagName("li");
+        alert(byTagName);
+
+    }
+</script>
+</html>

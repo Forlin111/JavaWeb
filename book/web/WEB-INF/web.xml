@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>registerServlet</servlet-name>
+        <servlet-class>com_lin.web.registerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registerServlet</servlet-name>
+        <url-pattern>/registerServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>com_lin.web.loginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>com_lin.web.userServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/userServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>bookServlet</servlet-name>
+        <servlet-class>com_lin.web.bookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bookServlet</servlet-name>
+        <!--为什么要在前面加上manager为了区分管理员和用户的,两者进入同一个页面的地址不同,以后要用到-->
+        <url-pattern>/manager/bookServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>clientBookServlet</servlet-name>
+        <servlet-class>com_lin.web.clientBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>clientBookServlet</servlet-name>
+        <url-pattern>/client/bookServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--谷歌验证码的配置文件-->
+    <servlet>
+        <servlet-name>KaptchaServlet</servlet-name>
+        <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>KaptchaServlet</servlet-name>
+        <url-pattern>/KaptchaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>cartServlet</servlet-name>
+        <servlet-class>com_lin.web.cartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cartServlet</servlet-name>
+        <url-pattern>/cartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>orderServlet</servlet-name>
+        <servlet-class>com_lin.web.orderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>orderServlet</servlet-name>
+        <url-pattern>/orderServlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>managerFilter</filter-name>
+        <filter-class>com_lin.filter.managerFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>managerFilter</filter-name>
+        <url-pattern>/pages/manager/*</url-pattern>
+        <url-pattern>/manager/bookServlet</url-pattern>
+    </filter-mapping>
+</web-app>

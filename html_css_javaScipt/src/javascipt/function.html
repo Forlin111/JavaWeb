@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let hhj=function (a,b) {
+            document.write("hhj已经"+(a+b));
+        }
+        hhj(10,8);
+    </script>
+    <!--自定义对象-->
+    <script>
+        let object = new Object();
+        document.write(typeof object);
+        object.name="hhj";
+        object.age=18;
+        object.fun=function () {
+            document.write(this.name+""+this.age);
+            document.writeln("111\n222");
+        }
+        object.fun();
+        /*花括号的自定义对象*/
+        let obj={
+            name:"hhj",
+            age:19,
+            fun:function () {
+                document.write(this.name+""+this.age+"\n");
+            }
+        }
+        obj.fun();
+    </script>
+
+</body>
+</html>

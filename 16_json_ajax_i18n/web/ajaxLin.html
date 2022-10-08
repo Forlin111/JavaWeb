@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="WEB-INF/lib/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //jquery实现ajax
+            $("#linAjax").click(function () {
+                $.ajax({
+                    url: "http://localhost:8087/16_json_ajax_i18n/ajaxServlet",
+                    data: "action=doGet",
+                    type: "GET",
+                    //data已经表示ajax返回的数据
+                    success: function (data) {
+                        $("#meg").html("编号:" + data.id + "姓名:" + data.name);
+                        alert("yes");
+                    },
+                    error: function () {
+                        alert("no");
+                    },
+                    dataType: "json"
+                });
+            });
+
+            //实现get
+            $("#linGet").click(function () {
+                $.get("http://localhost:8087/16_json_ajax_i18n/ajaxServlet", "action=lin1", function (data) {
+                    $("#meg").html("编号:" + data.id + "姓名:" + data.name);
+                }, "json")
+            })
+
+            //实现post
+            $("#linPost").click(function () {
+                $.get("http://localhost:8087/16_json_ajax_i18n/ajaxServlet", "action=lin1", function (data) {
+                    $("#meg").html("编号:" + data.id + "姓名:" + data.name);
+                }, "json")
+            })
+
+            //实现json
+            $("#linJson").click(function () {
+                $.getJSON("http://localhost:8087/16_json_ajax_i18n/ajaxServlet", "action=doGet", function (data) {
+                    $("#meg").html("编号:" + data.id + "姓名:" + data.name);
+                })
+            })
+        });
+    </script>
+</head>
+<body>
+<button id="linAjax">ajax request</button>
+<button id="linGet">ajax get</button>
+<button id="linPost">ajax post</button>
+<button id="linJson">ajax json</button>
+<div id="meg">
+
+</div>
+</body>
+</html>

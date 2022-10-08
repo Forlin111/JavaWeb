@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    以上是xml文件的声明
+    前一个为xml的版本
+    后一个为xml本身的编码
+-->
+<books> <!--表示多个图书信息-->
+    <book sn="SN1123">  <!--表示一个图书信息 sn表示图书序列号-->   <!--以下为图书的属性-->
+        <name>时间简史</name>
+        <author>霍金</author>
+        <price>75</price>
+    </book>
+    <book sn="SN1124">
+        <name>爱丽丝</name>
+        <author>不知道</author>
+        <price>45</price>
+    </book>
+    <book sn="SN1125" name="蒂法" peice="46"/>
+    <book sn="SN1123">
+        <name>最终幻想</name>
+        <author>
+            <![CDATA[<<<<<<wu]]><!--  <![CDATA[内容]]>   内容转义  -->
+        </author>
+        <price>75</price>
+    </book>
+</books>

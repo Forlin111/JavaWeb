@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" method="get" onsubmit="return onsubmit1()">
+    <input type="submit" value="提交">
+</form>
+</body>
+<script>
+    /*return false 可以阻止表单提交*/
+    let onsubmit1=function () {
+        alert("onsubmit");
+        //当为true时就可以提交了
+        return false;
+    }
+</script>
+</html>

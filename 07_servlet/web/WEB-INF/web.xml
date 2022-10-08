@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>RequestServletAPI</servlet-name>
+        <servlet-class>lin.servlet.RequestServletAPI</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestServletAPI</servlet-name>
+        <url-pattern>/requestServletAPI</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>paramServlet</servlet-name>
+        <servlet-class>lin.servlet.paramServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>paramServlet</servlet-name>
+        <url-pattern>/paramServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>lin.servlet.servlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/servlet1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>servlet2</servlet-name>
+        <servlet-class>lin.servlet.servlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet2</servlet-name>
+        <url-pattern>/servlet2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>forwardC</servlet-name>
+        <servlet-class>lin.servlet.forwardC</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>forwardC</servlet-name>
+        <url-pattern>/forwardC</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>responseIOServlet</servlet-name>
+        <servlet-class>lin.servlet.responseIOServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>responseIOServlet</servlet-name>
+        <url-pattern>/responseIOServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>response1</servlet-name>
+        <servlet-class>lin.servlet.response1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>response1</servlet-name>
+        <url-pattern>/response1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>response2</servlet-name>
+        <servlet-class>lin.servlet.response2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>response2</servlet-name>
+        <url-pattern>/response2</url-pattern>
+    </servlet-mapping>
+</web-app>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--表单提交-->
+<form action="http://www.baidu.com" method="get"><!--action设置提交的服务器地址-->
+    <h1 align="center">用户注册</h1>
+    <table align="center"
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" value="黄慧静"></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td>性别:</td>
+            <!--通过name属性分组,让浏览器知道是单选框-->
+            <td><input type="radio" name="sex" checked="checked">男<input type="radio" name="sex">女</td>
+        </tr>
+        <tr>
+            <td>兴趣爱好:</td>
+            <td><input type="checkbox" checked="checked">java
+                <input type="checkbox">javaScipt
+                <input type="checkbox">c++
+            </td>
+        </tr>
+        <tr>
+            <td>国籍:</td>
+            <td><select>
+                <option selected="selected">中国</option>
+                <option>美国</option>
+                <option>日本</option>
+                <option>韩国</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <td>自我评价:</td>
+            <td><textarea rows="10" cols="20">黄慧静我喜欢你黄慧静我喜欢你黄慧静我喜欢你</textarea></td>
+        </tr>
+        <tr>
+            <td>
+                <!--重置-->
+                <input type="reset" value="重置">
+            </td>
+            <td>
+                <!--提交文件-->
+                <input type="file">
+            </td>
+            <td>
+                <!--隐藏域 不需要用户看见或者填写时选择,但是提交时还是会发给服务器-->
+                <input type="hidden">
+            </td>
+            <td>
+                <input type="submit">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

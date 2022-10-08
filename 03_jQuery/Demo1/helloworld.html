@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../lib/jquery-3.6.0.js"></script>
+</head>
+<body>
+<button id="btn1">hello world</button>
+</body>
+<script>
+    window.onload = function () {
+        let byId = document.getElementById("btn1");
+        byId.onclick = function () {
+            document.writeln("js原生单击事件");
+        }
+    }
+</script>
+<script>
+    //jquery演示
+    $(function () {//相当于onload事件
+        let $btn1 = $("#btn1");//表示按照id查找对象
+        $btn1.click(function () {
+            alert("jquery的单击事件");
+        })
+    })
+</script>
+<script>
+    $(function () {
+        $("div" +
+            "<p>你好</p>" +
+            "<p>哈哈</p>" +
+            "</div>").appendTo("body");
+    });
+    alert($("button").length);
+    let byId = document.getElementById("btn1");
+    alert($(byId));//传入dom对象会返回一个jquery对象;
+</script>
+</html>
